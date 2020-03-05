@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   array_usuarios = ['adrian','frank','alberto','eduardo'];
+  avtivated = true;
+
 }
