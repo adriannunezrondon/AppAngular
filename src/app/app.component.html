@@ -7,6 +7,15 @@
 <ul>
   <h1>Booleno</h1>
   <li *ngIf="avtivated">
-        Activadoooooooooooooooooooo ooooo   
+        Activadooooooooooooooooooooooooo   
   </li>
 </ul> 
+
+
+<h1>For Input() entradas de Otro componente</h1>
+<ul>
+  <li *ngFor="let user of array_usuarios">
+    <app-user [nameUser]="user"></app-user>
+  </li>
+</ul> 
+
