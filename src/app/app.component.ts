@@ -12,6 +12,14 @@ export class AppComponent {
      alert("Hello");
    };
 
+   addUser(newUser){
+     this.users.push(newUser.value);
+    console.log(newUser.value);
+    newUser.value='';
+    newUser.focus();
+     return false;
+   };
+
    deleteUser(user){
       for (let index = 0; index < this.users.length; index++) 
         {
@@ -20,7 +28,7 @@ export class AppComponent {
              this.users.splice(index,1)
            }
         }
-  } 
+  };
 
     /*name: string='Ryan Ray';
     age:number;
