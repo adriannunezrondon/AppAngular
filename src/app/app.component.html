@@ -1,11 +1,24 @@
-<div>
+<!--<div>
   <p>name:{{name}}</p>
   <p>Street:{{address.street}}</p>
   <p>Street:{{address.city}}</p>
   <ul>
     <li *ngFor="let hobby of hobbies">
           {{hobby}}
-    </li>
+    </li> 
   </ul>
 
-</div>
+</div>-->
+<form >
+    <input type="text">
+    <button>Send User</button>
+</form>
+
+<ul>
+  <li *ngFor="let user of users">
+        {{user}}- <button (click)="sayHello()">Hello</button>
+        {{user}}- <button (click)="deleteUser(user)">Delete</button>
+  </li> 
+</ul>
+
+
