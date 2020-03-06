@@ -1,21 +1,11 @@
-<h1>For</h1>
-<ul>
-  <li *ngFor="let user of array_usuarios">
-      {{user }}
-  </li>
-</ul> 
-<ul>
-  <h1>Booleno</h1>
-  <li *ngIf="avtivated">
-        Activadooooooooooooooooooooooooo   
-  </li>
-</ul> 
+<div>
+  <p>name:{{name}}</p>
+  <p>Street:{{address.street}}</p>
+  <p>Street:{{address.city}}</p>
+  <ul>
+    <li *ngFor="let hobby of hobbies">
+          {{hobby}}
+    </li>
+  </ul>
 
-
-<h1>For Input() entradas de Otro componente</h1>
-<ul>
-  <li *ngFor="let user of array_usuarios">
-    <app-user [nameUser]="user"></app-user>
-  </li>
-</ul> 
-
+</div>

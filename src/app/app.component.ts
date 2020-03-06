@@ -6,7 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  array_usuarios = ['adrian','frank','alberto','eduardo'];
-  avtivated = true;
+   name: string='Ryan Ray';
+  age:number;
+  address:{
+    street: string;
+    city:string;
+  };
+
+  hobbies: string[];
+  constructor(){
+    
+    this.age=28;
+    this.address={
+      street:'calle 8 miami',
+      city:'EEUU'
+    };
+    this.hobbies=['swimming','read','write'];
+  }; 
+
+  
 
 }
