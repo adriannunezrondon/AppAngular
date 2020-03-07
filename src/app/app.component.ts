@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService} from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,25 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  name:string="Adrian";
+  age:number=32 ;
+
    users: string[]=['adrian', 'pedro','max', 'jose','rudy','francis'];
+   posts = [];
+
+   /*Servicios*/ 
+  constructor(private dataService:DataService){
+      this.dataService.getData().subscribe(data=>{
+        this.posts=data;
+      });
+  }
+
    sayHello(){
      alert("Hello");
    };
 
    addUser(newUser){
-     this.users.push(newUser.value);
+    this.users.push(newUser.value);
     console.log(newUser.value);
     newUser.value='';
     newUser.focus();
@@ -29,6 +42,9 @@ export class AppComponent {
            }
         }
   };
+
+  
+
 
     /*name: string='Ryan Ray';
     age:number;
